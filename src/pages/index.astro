@@ -1,0 +1,11 @@
+---
+import { getEntry } from 'astro:content'
+import PageLayout from 'src/layouts/PageLayout.astro'
+
+const { render } = await getEntry('chronicles', 'aimless-arrow')
+const { Content } = await render()
+---
+
+<PageLayout>
+  <Content />
+</PageLayout>

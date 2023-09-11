@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "allowImportingTsExtensions": true,
+    "lib": ["ESNext", "ESNext.WeakRef", "DOM", "DOM.Iterable"],
+    "plugins": [{ "name": "@astrojs/ts-plugin" }],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@features/*": ["src/features/*"],
+      "@styles/*": ["src/features/styles/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
