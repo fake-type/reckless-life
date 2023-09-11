@@ -1,11 +1,11 @@
 ---
 import { getEntry } from 'astro:content'
-import PageLayout from 'src/layouts/PageLayout.astro'
+import PageLayout from '@features/pageElement/PageLayout.astro'
 
 const { render } = await getEntry('chronicles', 'aimless-arrow')
 const { Content } = await render()
 ---
 
-<PageLayout>
+<PageLayout title="Reckless Life" description="">
   <Content />
 </PageLayout>

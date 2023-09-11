@@ -1,0 +1,37 @@
+---
+import { pageStyle } from './page.css.ts'
+import Header from './components/header/Header.tsx'
+import Aside from './components/aside/Aside.tsx'
+import Content from './components/content/Content.tsx'
+import '@styles/glob.css.ts'
+
+type Props = {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="title" content={title} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <div class={pageStyle}>
+      <Aside />
+      <Content>
+        <Header />
+        <slot />
+      </Content>
+    </div>
+  </body>
+</html>
