@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content'
+import PageLayout from '@features/pageElement/PageLayout.astro'
+
+const chronicles = await getCollection('chronicles')
+---
+
+<PageLayout title="chronicles" description="Reckless life | chronicles">
+  {
+    chronicles.map(entry => (
+      <a href={`/chronicles/${entry.slug}`}>
+        {JSON.stringify(entry.data, null)}
+      </a>
+    ))
+  }
+</PageLayout>

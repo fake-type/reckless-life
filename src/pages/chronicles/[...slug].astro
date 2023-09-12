@@ -1,0 +1,22 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content'
+import PageLayout from '@features/pageElement/PageLayout.astro'
+
+type Props = {
+  entry: CollectionEntry<'chronicles'>
+}
+
+export async function getStaticPaths() {
+  return (await getCollection('chronicles')).map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<PageLayout title={entry.data.title} description="">
+  <Content />
+</PageLayout>
