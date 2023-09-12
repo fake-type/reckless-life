@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "test": "vitest",
     "format": "prettier --write --cache \"**/*.{ts,tsx,md,astro}\"",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "check:ci": "pnpm lint && pnpm astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.2.0",

@@ -6,6 +6,8 @@ on:
         description: 'The selected node version to be installed'
         default: '20'
         type: string
+      command:
+        type: string
 
 jobs:
   cache-and-install:
@@ -31,3 +33,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Run Command
+        run: pnpm {inputs.command}
