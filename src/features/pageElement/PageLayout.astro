@@ -1,5 +1,5 @@
 ---
-import { AdapterStyle, MainContent, pageStyle } from './page.css.ts'
+import { MainContent, pageStyle } from './page.css.ts'
 import Header from './components/header/Header.tsx'
 import Aside from './components/aside/Aside.tsx'
 import '@styles/glob.css.ts'
@@ -29,7 +29,7 @@ const { title, description } = Astro.props
       <Aside />
       <main class={MainContent}>
         <Header textDisplay={title} />
-        <div class={AdapterStyle}>
+        <div>
           <slot />
         </div>
       </main>
