@@ -1,8 +1,7 @@
 ---
-import { pageStyle } from './page.css.ts'
+import { AdapterStyle, MainContent, pageStyle } from './page.css.ts'
 import Header from './components/header/Header.tsx'
 import Aside from './components/aside/Aside.tsx'
-import Content from './components/content/Content.tsx'
 import '@styles/glob.css.ts'
 
 type Props = {
@@ -28,10 +27,12 @@ const { title, description } = Astro.props
   <body>
     <div class={pageStyle}>
       <Aside />
-      <Content>
-        <Header />
-        <slot />
-      </Content>
+      <main class={MainContent}>
+        <Header textDisplay={title} />
+        <div class={AdapterStyle}>
+          <slot />
+        </div>
+      </main>
     </div>
   </body>
 </html>

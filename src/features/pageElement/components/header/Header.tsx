@@ -1,8 +1,16 @@
 import { FunctionComponent } from 'react'
 import { HeaderStyle } from './Header.css.ts'
 
-const Header: FunctionComponent = () => {
-  return <header className={HeaderStyle}>Header</header>
+type Props = {
+  textDisplay: string
+}
+
+const Header: FunctionComponent<Props> = ({ textDisplay }) => {
+  return (
+    <header className={HeaderStyle}>
+      <div>{textDisplay}</div>
+    </header>
+  )
 }
 
 export default Header

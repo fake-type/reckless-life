@@ -3,11 +3,15 @@ import { createContainer, globalStyle, style } from '@vanilla-extract/css'
 export const pageContainer = createContainer()
 export const pageStyle = style({
   display: 'flex',
-  maxWidth: '1400px',
   minHeight: ['100vh', '100dvh'],
-  margin: 'auto',
   containerType: 'inline-size',
   containerName: pageContainer
+})
+
+export const MainContent = style({
+  display: 'flex',
+  flexFlow: 'column',
+  width: '100%'
 })
 
 globalStyle(`${pageStyle} img`, {

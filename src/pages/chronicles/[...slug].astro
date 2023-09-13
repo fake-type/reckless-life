@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
 import PageLayout from '@features/pageElement/PageLayout.astro'
+import ContentAdapter from '@features/chronicles/ContentAdapter'
 
 type Props = {
   entry: CollectionEntry<'chronicles'>
@@ -18,5 +19,7 @@ const { Content } = await entry.render()
 ---
 
 <PageLayout title={entry.data.title} description="">
-  <Content />
+  <ContentAdapter>
+    <Content />
+  </ContentAdapter>
 </PageLayout>

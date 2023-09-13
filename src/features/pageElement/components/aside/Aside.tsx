@@ -4,13 +4,15 @@ import { AsideStyle } from './Aside.css.ts'
 const Aside: FunctionComponent = () => {
   return (
     <aside className={AsideStyle}>
-      <div>Aside</div>
       <div>
-        <ul>
-          <li>
-            <a href="/chronicles">chronicles</a>
-          </li>
-        </ul>
+        <div style={{ padding: '3em' }}>Aside</div>
+        <div>
+          <ul>
+            <li>
+              <a href="/chronicles">chronicles</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </aside>
   )
