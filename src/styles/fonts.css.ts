@@ -1,5 +1,11 @@
 import { fontFace } from '@vanilla-extract/css'
 
+export const martianMono = fontFace({
+  fontStyle: 'normal',
+  fontDisplay: 'fallback',
+  src: [`local(Martian Mono)`, 'url(/fonts/MartianMonoVF.woff2)']
+})
+
 export const jetBrainsMono = fontFace([
   {
     fontStyle: 'italic',

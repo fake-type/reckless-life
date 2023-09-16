@@ -1,11 +1,26 @@
 ---
-import { getEntry } from 'astro:content'
-import PageLayout from '@features/pageElement/PageLayout.astro'
-
-const { render } = await getEntry('chronicles', 'aimless-arrow')
-const { Content } = await render()
+import Document from '@layouts/Document.astro'
 ---
 
-<PageLayout title="Reckless Life" description="">
-  <Content />
-</PageLayout>
+<Document title="Reckless Life" description="">
+  <main>
+    <h1 id="aimless">Aimless</h1>
+    <p>
+      I'm that aimless arrow <br />
+       Lost from my very start <br />
+       Violence without purpose <br />
+       Born of broken hearts <br />
+       No one will ever guide me <br />
+       As I sail through the air <br />
+       Now I just bring sadness <br />
+       In those who choose to care
+    </p>
+
+    <figure>
+      <img
+        src="https://res.cloudinary.com/dhnc8dhle/image/upload/v1694474743/neco-arc-5.gif"
+        alt="Neco Arc"
+      />
+    </figure>
+  </main>
+</Document>

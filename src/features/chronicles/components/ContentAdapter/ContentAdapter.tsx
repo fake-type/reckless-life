@@ -1,10 +1,10 @@
 import { FunctionComponent, PropsWithChildren } from 'react'
-import { ContentContainer, TextContent } from './ContentAdapter.css'
+import { ContentContainer, ContentStyled } from './ContentAdapter.css'
 
 const ContentAdapter: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <div className={ContentContainer}>
-      <div className={TextContent}>{children}</div>
+      <article className={ContentStyled}>{children}</article>
     </div>
   )
 }

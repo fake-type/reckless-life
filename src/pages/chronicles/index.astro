@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content'
-import PageLayout from '@features/pageElement/PageLayout.astro'
+import Document from '@layouts/Document.astro'
 
 const chronicles = await getCollection('chronicles')
 ---
 
-<PageLayout title="chronicles" description="Reckless life | chronicles">
+<Document title="chronicles" description="Reckless life | chronicles">
   {
     chronicles.map(entry => (
       <a href={`/chronicles/${entry.slug}`}>
@@ -13,4 +13,4 @@ const chronicles = await getCollection('chronicles')
       </a>
     ))
   }
-</PageLayout>
+</Document>

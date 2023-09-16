@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { HeaderStyle } from './Header.css.ts'
+import { HeaderStyle } from './Header.css.js'
 
 type Props = {
   textDisplay: string

@@ -1,7 +1,8 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
-import PageLayout from '@features/pageElement/PageLayout.astro'
-import ContentAdapter from '@features/chronicles/ContentAdapter'
+import Document from '@layouts/Document.astro'
+import ContentAdapter from '@features/chronicles/components/ContentAdapter/ContentAdapter.tsx'
+import Header from '@features/chronicles/components/Header/Header.tsx'
 
 type Props = {
   entry: CollectionEntry<'chronicles'>
@@ -18,8 +19,9 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<PageLayout title={entry.data.title} description="">
+<Document title={entry.data.title} description="">
   <ContentAdapter>
+    <Header textDisplay={entry.data.title} />
     <Content />
   </ContentAdapter>
-</PageLayout>
+</Document>
