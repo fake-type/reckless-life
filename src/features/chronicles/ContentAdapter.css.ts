@@ -3,9 +3,8 @@ import { createContainer, globalStyle, style } from '@vanilla-extract/css'
 export const contentContainerName = createContainer()
 export const ContentContainer = style({
   display: 'flex',
+  flexDirection: 'column',
   width: '100%',
-  maxWidth: '48em',
-  padding: '0 .8em',
   justifyContent: 'center',
   containerType: 'inline-size',
   containerName: contentContainerName

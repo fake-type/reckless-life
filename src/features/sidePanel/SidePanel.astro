@@ -1,8 +1,10 @@
 ---
-import { SidePanelStyled } from './SidePanel.css'
+import { SidePanelStyled, MenuStyled } from './SidePanel.css'
 import List from './components/List/List'
 ---
 
 <aside class={SidePanelStyled}>
-  <List list={['chronicles']} />
+  <div class={MenuStyled}>
+    <List list={['chronicles']} />
+  </div>
 </aside>

@@ -1,4 +1,4 @@
-import { globalStyle, style } from '@vanilla-extract/css'
+import { createContainer, globalStyle, style } from '@vanilla-extract/css'
 import { martianMono } from './fonts.css'
 
 globalStyle('*, :after, :before', {
@@ -13,11 +13,14 @@ export const BodyStyled = style({
   backgroundColor: '#242424'
 })
 
+export const PageContainerName = createContainer()
 export const PageStyled = style({
   display: 'flex',
-  justifyContent: 'center',
+  flexFlow: 'row nowrap',
   gap: '.5em',
-  minHeight: ['100dvh', '100vh']
+  minHeight: ['100dvh', '100vh'],
+  containerName: PageContainerName,
+  containerType: 'inline-size'
 })
 
 globalStyle('ol, ul, menu', { listStyle: 'none' })
