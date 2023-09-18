@@ -14,7 +14,7 @@ export const SidePanelStyled = style({
   containerType: 'inline-size',
 
   '@container': {
-    [`${PageContainerName} (min-width: 1240px)`]: {
+    [`${PageContainerName} (min-width: 1024px)`]: {
       display: 'flex'
     }
   }
