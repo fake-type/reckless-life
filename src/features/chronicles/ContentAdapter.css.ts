@@ -23,7 +23,8 @@ globalStyle(`${ContentContainer} h1`, {
 })
 
 globalStyle(`${ContentContainer} a`, {
-  textDecoration: 'none'
+  textDecoration: 'none',
+  color: 'blue'
 })
 
 globalStyle(`${ContentContainer} a:hover`, {

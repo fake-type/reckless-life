@@ -5,12 +5,20 @@ import Document from '@layouts/Document.astro'
 const chronicles = await getCollection('chronicles')
 ---
 
-<Document title="chronicles" description="Reckless life | chronicles">
-  {
-    chronicles.map(entry => (
-      <a href={`/chronicles/${entry.slug}`}>
-        {JSON.stringify(entry.data, null)}
-      </a>
-    ))
+<style>
+  .fullWidth {
+    width: 100%;
   }
+</style>
+
+<Document title="chronicles" description="Reckless life | chronicles">
+  <div class="fullWidth">
+    {
+      chronicles.map(entry => (
+        <a href={`/chronicles/${entry.slug}`}>
+          {JSON.stringify(entry.data, null)}
+        </a>
+      ))
+    }
+  </div>
 </Document>
