@@ -2,10 +2,7 @@ import { createContainer, globalStyle, style } from '@vanilla-extract/css'
 
 export const contentContainerName = createContainer()
 export const ContentContainer = style({
-  display: 'flex',
-  flexDirection: 'column',
   width: '100%',
-  justifyContent: 'center',
   containerType: 'inline-size',
   containerName: contentContainerName
 })
@@ -13,6 +10,7 @@ export const ContentContainer = style({
 export const ContentStyled = style({
   maxWidth: '48em',
   margin: 'auto',
+  padding: '.8em',
   selectors: {}
 })
 
