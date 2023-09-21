@@ -1,4 +1,4 @@
-import { PageContainerName } from '@styles/defaults.css'
+import { PageContainerName } from '@layouts/Document/Document.css.ts'
 import { style } from '@vanilla-extract/css'
 
 export const HeaderStyle = style({

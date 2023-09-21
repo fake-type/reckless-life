@@ -1,30 +1,21 @@
-import { createContainer, globalStyle, style } from '@vanilla-extract/css'
-
-export const contentContainerName = createContainer()
-export const ContentContainer = style({
-  width: '100%',
-  containerType: 'inline-size',
-  containerName: contentContainerName
-})
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const ContentStyled = style({
   maxWidth: '48em',
-  margin: 'auto',
-  padding: '.8em',
-  selectors: {}
+  padding: '.8em'
 })
 
-globalStyle(`${ContentContainer} h1`, {
+globalStyle(`${ContentStyled} h1`, {
   fontSize: '2em',
   padding: '.7em 0',
   fontWeight: 'normal'
 })
 
-globalStyle(`${ContentContainer} a`, {
+globalStyle(`${ContentStyled} a`, {
   textDecoration: 'none',
-  color: 'blue'
+  color: 'red'
 })
 
-globalStyle(`${ContentContainer} a:hover`, {
+globalStyle(`${ContentStyled} a:hover`, {
   textDecoration: 'wavy underline'
 })

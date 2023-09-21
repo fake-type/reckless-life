@@ -1,6 +1,12 @@
 ---
-import { BodyStyled, PageStyled } from '@styles/defaults.css'
 import SidePanel from '@features/sidePanel/SidePanel.astro'
+import { DarkTheme } from '@styles/themes/dark.css.ts'
+import {
+  AppRootStyled,
+  MainPanelContainer,
+  PageStyled
+} from '@layouts/Document/Document.css'
+import '@styles/global.css.ts'
 
 type Props = {
   title: string
@@ -22,10 +28,12 @@ const { title, description } = Astro.props
     <title>{title}</title>
   </head>
 
-  <body class={BodyStyled}>
-    <div class={PageStyled}>
+  <body class:list={[AppRootStyled, DarkTheme]}>
+    <div class:list={PageStyled}>
       <SidePanel />
-      <slot />
+      <main class={MainPanelContainer}>
+        <slot />
+      </main>
     </div>
   </body>
 </html>

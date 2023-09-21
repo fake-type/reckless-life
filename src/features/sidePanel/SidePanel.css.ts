@@ -1,4 +1,4 @@
-import { PageContainerName } from '@styles/defaults.css'
+import { PageContainerName } from '@layouts/Document/Document.css.ts'
 import { createContainer, style } from '@vanilla-extract/css'
 
 export const SidePanelContainerName = createContainer()
@@ -8,10 +8,8 @@ export const SidePanelStyled = style({
   width: 'calc(50% - 19em)',
   minWidth: '19em',
   padding: '1em',
-  backgroundColor: '#454545',
-  backdropFilter: 'blur(15px)',
-  containerName: SidePanelContainerName,
   containerType: 'inline-size',
+  containerName: SidePanelContainerName,
 
   '@container': {
     [`${PageContainerName} (min-width: 1024px)`]: {
