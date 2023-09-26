@@ -3,7 +3,15 @@ import { SidePanelStyled, MenuStyled } from './SidePanel.css'
 import List from './components/List/List'
 ---
 
+<style>
+  h3 {
+    text-align: end;
+    padding: 0.4em;
+  }
+</style>
+
 <aside class={SidePanelStyled}>
+  <h3><a href="/">Home</a></h3>
   <div class={MenuStyled}>
     <List list={['chronicles']} />
   </div>

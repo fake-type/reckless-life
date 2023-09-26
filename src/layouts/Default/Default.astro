@@ -1,0 +1,18 @@
+---
+import Document from '@layouts/Document/Document.astro'
+import SidePanel from '@features/sidePanel/SidePanel.astro'
+import { PageStyled, PageWrapperStyled } from './Default.css.ts'
+
+export type Props = Parameters<typeof Document>[0]
+
+const { props } = Astro
+---
+
+<Document title={props.title} description={props.description}>
+  <div class={PageWrapperStyled}>
+    <div class={PageStyled}>
+      <SidePanel />
+      <main><slot /></main>
+    </div>
+  </div>
+</Document>

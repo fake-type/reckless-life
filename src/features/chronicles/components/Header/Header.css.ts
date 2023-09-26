@@ -1,4 +1,4 @@
-import { PageContainerName } from '@layouts/Document/Document.css.ts'
+import { pageContainerSizes } from '@layouts/Default/Default.css'
 import { style } from '@vanilla-extract/css'
 
 export const HeaderStyle = style({
@@ -14,7 +14,7 @@ export const HeaderStyle = style({
   backdropFilter: 'blur(5px)',
 
   '@container': {
-    [`${PageContainerName} (min-width: 1240px)`]: {
+    [pageContainerSizes.laptop]: {
       display: 'none'
     }
   }

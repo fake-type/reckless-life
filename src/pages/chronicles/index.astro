@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import Document from '@layouts/Document/Document.astro'
+import DefaultLayout from '@layouts/Default/Default.astro'
 
 const chronicles = await getCollection('chronicles')
 ---
@@ -11,7 +11,7 @@ const chronicles = await getCollection('chronicles')
   }
 </style>
 
-<Document title="chronicles" description="Reckless life | chronicles">
+<DefaultLayout title="chronicles" description="Reckless Life - Chronicles ">
   <div class="fullWidth">
     {
       chronicles.map(entry => (
@@ -21,4 +21,4 @@ const chronicles = await getCollection('chronicles')
       ))
     }
   </div>
-</Document>
+</DefaultLayout>
