@@ -10,7 +10,7 @@ on:
         type: string
 
 jobs:
-  cache-and-install:
+  run-pnpm:
     runs-on: ubuntu-latest
 
     steps:
