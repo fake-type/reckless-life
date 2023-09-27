@@ -10,6 +10,8 @@ export const pageContainerSizes = {
 
 export const PageWrapperStyled = style({
   minHeight: ['100vh', '100dvh'],
+  maxWidth: '1040px',
+  margin: 'auto',
   containerType: 'inline-size',
   containerName: PageWrapperName
 })
@@ -18,7 +20,6 @@ export const PageStyled = style({
   display: 'flex',
   gap: '.6em',
   margin: 'auto',
-  maxWidth: '1440px',
   containerType: 'inline-size',
   containerName: PageContainerName
 })

@@ -1,8 +1,11 @@
 import { globalStyle, style } from '@vanilla-extract/css'
 
+export const ContentWrapperStyled = style({})
+
 export const ContentStyled = style({
   maxWidth: '48em',
-  padding: '.8em'
+  padding: '.8em',
+  margin: 'auto'
 })
 
 globalStyle(`${ContentStyled} h1`, {

@@ -1,9 +1,9 @@
 ---
-import { ContentStyled } from './ContentAdapter.css'
+import { ContentWrapperStyled, ContentStyled } from './ContentAdapter.css'
 import Header from './components/Header/Header.tsx'
 ---
 
-<div>
+<div class={ContentWrapperStyled}>
   <Header textDisplay="Touhou" />
   <article class={ContentStyled}><slot /></article>
 </div>
